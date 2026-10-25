@@ -1,7 +1,0 @@
-organization=gsus1994
-projectKey=Gsus1994_prueba_sonar
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.113843
-dashboardUrl=https://sonarcloud.io/dashboard?id=Gsus1994_prueba_sonar
-ceTaskId=AaF0HK6yk-m4lzyjmtFF
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AaF0HK6yk-m4lzyjmtFF

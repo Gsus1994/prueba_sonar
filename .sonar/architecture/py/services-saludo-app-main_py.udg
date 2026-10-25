@@ -1,84 +1,0 @@
-
-1.0PythonFrontend"1792949388018*py2.B“
-
-imports1
-
-extends2
-
-returns3
-
-	has param4
-
-
-calls5
-
-module6
-
-
-class7
-
-method8
-
-function9
-!
-services/saludo/app/main.py11
-
-services.saludo.app.main13
-
-fastapi14
-&
- services.saludo.app.main.saludar16
-&
- fastapi.applications.FastAPI.get18
-
-ARG_019
-
-/hello20
-
-
-dict21
-"
-fastapi.applications.FastAPI23
-
-	ARG_title25
-
-Servicio de saludo26J
-
-10
-
-1011 j‹
-!
-12
-12136 *
-10 (
-
-15
-15146
--
-17'
-17169 212R
-
-18
-
-
-19
-20
-
-22
-22217
-
-24
-24237r_
-
-12151*
-10 (
-
-17223*
-10 (
-'
-12245*
-10 (*2
-
-
-25
-26

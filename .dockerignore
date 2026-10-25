@@ -4,3 +4,7 @@
 .pytest_cache
 .env
 tests
+.sonar
+.scannerwork
+.coverage
+coverage.xml

@@ -73,6 +73,49 @@ python -m pytest
 Las pruebas comprueban las respuestas HTTP de los cuatro servicios, incluidos
 ambos resultados posibles de la moneda.
 
+## SonarCloud y CI
+
+El workflow `.github/workflows/sonar.yml` ejecuta las pruebas y genera cobertura
+en cada push a cualquier rama y al abrir o actualizar una PR. Después envía el
+análisis a [SonarCloud](https://sonarcloud.io/dashboard?id=Gsus1994_prueba_sonar)
+y espera el resultado del Quality Gate: si falla, también falla el CI.
+Se puede ejecutar manualmente desde la pestaña Actions de GitHub.
+
+`sonar-project.properties` contiene los identificadores reales del proyecto:
+
+- Organización: `gsus1994`.
+- Proyecto: `Gsus1994_prueba_sonar`.
+- Servidor: `https://sonarcloud.io`.
+
+Para activar el análisis en GitHub:
+
+1. En [los secretos de Actions del repositorio](https://github.com/Gsus1994/prueba_sonar/settings/secrets/actions),
+   crea un secreto llamado `SONAR_TOKEN` con un token vigente que tenga permisos
+   de análisis sobre este proyecto. Usa un token nuevo si el anterior se compartió.
+2. En SonarCloud, abre **Administration > Analysis Method** y desactiva
+   **Automatic Analysis** si está habilitado. El análisis lo ejecutará el CI,
+   tal como indica la [documentación oficial de cobertura para Python](https://docs.sonarsource.com/sonarqube-cloud/analyzing-source-code/test-coverage/python-test-coverage).
+3. Publica los cambios en GitHub para que se ejecute el workflow.
+
+El token se obtiene de `secrets.SONAR_TOKEN`; nunca se guarda en los archivos
+del repositorio. Si falta en un evento con acceso a secretos, el workflow falla
+con un mensaje que indica cómo configurarlo. En PRs desde forks y ejecuciones
+de Dependabot se ejecutan las pruebas y se omite el escaneo, porque GitHub no
+les proporciona los secretos de Actions del repositorio.
+
+Para generar el mismo informe de cobertura localmente:
+
+```bash
+python -m coverage run -m pytest -q
+python -m coverage xml
+python -m coverage report
+```
+
+Con `pysonar` instalado y `SONAR_TOKEN` definido en el entorno, basta ejecutar
+`pysonar` desde la raíz para usar las mismas claves y el informe `coverage.xml`.
+Las carpetas `.sonar/` y `.scannerwork/` y los informes de cobertura se ignoran
+en Git; son archivos generados y no se deben versionar.
+
 ## Estructura
 
 ```text
