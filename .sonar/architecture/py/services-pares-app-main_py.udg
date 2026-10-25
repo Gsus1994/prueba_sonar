@@ -1,0 +1,121 @@
+
+1.0PythonFrontend"1792949388033*py2.B‰
+
+imports1
+
+extends2
+
+returns3
+
+	has param4
+
+
+calls5
+
+module6
+
+
+class7
+
+method8
+
+function9
+ 
+services/pares/app/main.py11
+
+services.pares.app.main13
+
+fastapi14
++
+%services.pares.app.main.obtener_pares16
+&
+ fastapi.applications.FastAPI.get18
+
+ARG_019
+
+/pares20
+
+
+dict21
+"
+fastapi.applications.FastAPI23
+
+
+list25
+
+range27
+
+	ARG_title29
+ 
+Servicio de n√∫meros pares30
+
+231
+
+ARG_132
+
+2133
+
+ARG_234J
+
+10
+
+1011 j±
+!
+12
+12136 *
+10 (
+
+15
+15146
+-
+17'
+17169 212R
+
+18
+
+
+19
+20
+
+22
+22217
+
+24
+24237
+
+26
+26257
+
+28
+28277rª
+
+12151*
+10 (
+
+17223*
+10 (
+'
+12245*
+10 (12
+
+
+29
+30
+
+17265*
+10	 	(+
+?
+17285*
+10	 	(*2$
+
+
+19
+31
+
+
+32
+33
+
+
+34
+31
