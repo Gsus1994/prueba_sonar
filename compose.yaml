@@ -1,0 +1,32 @@
+services:
+  fecha:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: fecha
+    ports:
+      - "8001:8000"
+
+  pares:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: pares
+    ports:
+      - "8002:8000"
+
+  moneda:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: moneda
+    ports:
+      - "8003:8000"
+
+  saludo:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: saludo
+    ports:
+      - "8004:8000"
